@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -222,9 +223,17 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         /* About Section */
@@ -700,12 +709,14 @@
                 grid-template-columns: 1fr;
             }
 
-            .projects-container, .blog-container {
+            .projects-container,
+            .blog-container {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav id="navbar">
@@ -740,11 +751,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="{{ url_for('static', filename= 'images/profile photo.jpg' )}}" alt="PRANAV SAHU" width="250">
-                <!-- <div style="background-color: #3498db; height: 300px; width: 300px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;"> -->
-                    <!-- <i class="fas fa-user-graduate" style="font-size: 120px; color: green;"></i> -->
-                </div>
-            </div>
+                <img src="{{ url_for('static', filename= 'images/photo.png' )}}" alt="PRANAV SAHU" width="250">
+        </div>
         </div>
     </section>
 
@@ -754,13 +762,17 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <div style="background-color: #e0e0e0; height: 400px; width: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                    <div
+                        style="background-color: #e0e0e0; height: 400px; width: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
                         <i class="fas fa-user" style="font-size: 120px; color: #7f8c8d;"></i>
                     </div>
                 </div>
                 <div class="about-text">
-                    <p>I'm a Data Science student at Chhatrapati Shivaji Institute of Engineering with a passion for machine learning, statistical analysis, and data visualization. I enjoy solving complex problems and uncovering hidden patterns in data.</p>
-                    <p>Currently in my 1st year, I'm building my skills in Python, data analysis, and machine learning. My goal is to become a professional Data Scientist.</p>
+                    <p>I'm a Data Science student at Chhatrapati Shivaji Institute of Engineering with a passion for
+                        machine learning, statistical analysis, and data visualization. I enjoy solving complex problems
+                        and uncovering hidden patterns in data.</p>
+                    <p>Currently in my 1st year, I'm building my skills in Python, data analysis, and machine learning.
+                        My goal is to become a professional Data Scientist.</p>
                     <div class="about-details">
                         <div class="detail-item">
                             <span class="detail-label">Education:</span>
@@ -781,63 +793,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-<section id="skills" class="section bg-light">
-    <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
 
-        <div class="skills-grid">
-
-            <!-- Programming -->
-            <div class="skill-box">
-                <h3>Programming</h3>
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>JavaScript</span>
-                    <span>C</span>
-                </div>
-            </div>
-
-            <!-- Data Science -->
-            <div class="skill-box">
-                <h3>Data Science</h3>
-                <div class="skill-tags">
-                    <span>NumPy</span>
-                    <span>Pandas</span>
-                    <span>Data Analysis</span>
-                    <span>Statistical Analysis</span>
-                    <span>Data Visualization</span>
-                </div>
-            </div>
-
-            <!-- Machine Learning -->
-            <div class="skill-box">
-                <h3>Machine Learning</h3>
-                <div class="skill-tags">
-                    <span>Scikit-learn</span>
-                    <span>Model Evaluation</span>
-                    <span>Feature Engineering</span>
-                    <span>Data Preprocessing</span>
-                </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="skill-box">
-                <h3>Tools & Technologies</h3>
-                <div class="skill-tags">
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>Jupyter Notebook</span>
-                    <span>VS Code</span>
-                    <span>Linux</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-    <!-- Skills Section
     <section id="skills" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
@@ -950,71 +906,79 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-chart-line" style="font-size: 64px; color: #3498db;"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>House Price Prediction</h3>
-                        <p>Regression model to predict California housing prices using advanced feature engineering.</p>
+                        <h3>Customer Churn Prediction</h3>
+                        <p>Machine learning model to predict customer churn using EDA, feature engineering, and
+                            classification techniques to help businesses improve customer retentio.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Scikit-learn</span>
                             <span>EDA</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Details</a>
+                            <a href="https://github.com/hitmanp007/-personal-portfolio.git" target="_blank"
+                                class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-virus" style="font-size: 64px; color: #e74c3c;"></i>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div
+                                style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-virus" style="font-size: 64px; color: #e74c3c;"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>COVID-19 Data Dashboard</h3>
+                            <p>Interactive dashboard visualizing COVID-19 trends using Plotly Dash and live API data.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Dash</span>
+                                <span>Data Viz</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Details</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>COVID-19 Data Dashboard</h3>
-                        <p>Interactive dashboard visualizing COVID-19 trends using Plotly Dash and live API data.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Dash</span>
-                            <span>Data Viz</span>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div
+                                style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-shopping-cart" style="font-size: 64px; color: #2c3e50;"></i>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Details</a>
+                        <div class="project-content">
+                            <h3>Credit Card Fraud Detection</h3>
+<p>Built a machine learning model to detect fraudulent credit card transactions using imbalanced data, feature engineering, and classification techniques to minimize financial risk.</p>                                targeted marketing.</p>
+                            <div class="project-tech">
+                                <span>Logistic Regression</span>
+                                <span>Random Forest</span>
+                                <span>SMOTE</span>
+                                <span>Imbalanced Data</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-shopping-cart" style="font-size: 64px; color: #2c3e50;"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Customer Segmentation</h3>
-                        <p>Unsupervised learning project to segment customers based on purchasing behavior for targeted marketing.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>K-means</span>
-                            <span>Clustering</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Details</a>
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <a href="#" class="btn">View All Projects</a>
                 </div>
             </div>
-            <div class="text-center">
-                <a href="#" class="btn">View All Projects</a>
-            </div>
-        </div>
     </section>
 
     <!-- Blog Section -->
@@ -1025,7 +989,8 @@
                 <!-- Article 1 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <div style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-broom" style="font-size: 64px; color: #3498db;"></i>
                         </div>
                     </div>
@@ -1039,7 +1004,8 @@
                 <!-- Article 2 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <div style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-graduation-cap" style="font-size: 64px; color: #e74c3c;"></i>
                         </div>
                     </div>
@@ -1053,7 +1019,8 @@
                 <!-- Article 3 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <div style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <div
+                            style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-chart-bar" style="font-size: 64px; color: #2c3e50;"></i>
                         </div>
                     </div>
@@ -1078,7 +1045,8 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-                    <p>I'm always interested in hearing about new opportunities, research collaborations, or just chatting about data science!</p>
+                    <p>I'm always interested in hearing about new opportunities, research collaborations, or just
+                        chatting about data science!</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -1156,12 +1124,12 @@
 
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
@@ -1217,19 +1185,19 @@
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             // Here you would typically send the data to a server
             console.log({ name, email, subject, message });
-            
+
             // Show success message
             alert('Thank you for your message! I will get back to you soon.');
-            
+
             // Reset form
             contactForm.reset();
         });
@@ -1244,4 +1212,5 @@
         });
     </script>
 </body>
+
 </html>
